@@ -3,6 +3,7 @@ from django.views import generic
 from .forms import  inquiryForm
 import logging
 from django.urls import reverse_lazy
+from django.contrib import messages
 
 logger = logging.getLogger(__name__)
 
@@ -17,6 +18,7 @@ class inquiryView(generic.FormView):
 
     def form_valid(self, form):
         form.send_mail()
+        messages.success(self.request, 'メッセージ送信完了')
         logger.info('Inquiry sent by {}'.format(form.cleaned_data['name']))
         return super().form_valid(form)
 
