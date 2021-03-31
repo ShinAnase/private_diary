@@ -31,6 +31,6 @@ class DiaryListView(LoginRequiredMixin, generic.ListView):
     template_name = 'diary_list.html'
 
     def get_queryset(self):
-        diaries = Diary.objects.filter(user=self.request.user).order_by('-created_at') #作成日時降順
+        diaries = Diary.objects.filter(user=self.request.user).order_by('-create_at') #作成日時降順
         return diaries
 
