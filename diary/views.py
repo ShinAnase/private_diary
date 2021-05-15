@@ -7,7 +7,7 @@ from django.contrib import messages
 
 from django.contrib.auth.mixins import LoginRequiredMixin
 from .models import Diary
-from .forms import InquiryForm, DiaryCreateForm
+from .forms import inquiryForm, DiaryCreateForm
 
 logger = logging.getLogger(__name__)
 
