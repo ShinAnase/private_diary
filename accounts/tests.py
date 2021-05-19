@@ -6,7 +6,7 @@ class TestLogin(LiveServerTestCase):
     @classmethod
     def setUpClass(cls):
         super().setUpClass()
-        cls.selenium = WebDriver(executable_path='C:/Users/hfuis/venv_private_diary/chromedriver_win32')
+        cls.selenium = WebDriver(executable_path='C:/Users/hfuis/venv_private_diary/chromedriver_win32/chromedriver.exe')
 
     @classmethod
     def tearDownClass(cls):
@@ -18,10 +18,10 @@ class TestLogin(LiveServerTestCase):
 
         # ログイン
         username_input = self.selenium.find_element_by_name("login")
-        username_input.send_keys('<ユーザー登録済みのメールアドレス>')
+        username_input.send_keys('abc@exam.com')
         passward_input = self.selenium.find_element_by_name("password")
-        username_input.send_keys('<ログインパスワード>')
+        passward_input.send_keys('<パスワード>')
         self.selenium.find_element_by_class_name('btn').click()
 
         #ページタイトルの検証
-        self.assertEquals('日記一覧|Private Diary', self.selenium.title)
+        self.assertEquals('日記一覧 | Private Diary', self.selenium.title)

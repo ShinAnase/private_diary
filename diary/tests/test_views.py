@@ -93,7 +93,7 @@ class TestDiaryUpdateView(LoggedInTestCase):
 class TestDiaryDeleteView(LoggedInTestCase):
     """DiaryDeleteView用のテストクラス"""
 
-    def test_delete_diary_success(selfs):
+    def test_delete_diary_success(self):
         """日記削除処理が成功することを検証する"""
 
         # テスト用日記データの作成
