@@ -219,3 +219,7 @@ DEFAULT_FROM_EMAIL = 'admin@example.com'
 MEDIA_URL = '/media/'
 
 LOGIN_REDIRECT_URL = 'diary:diary_list'
+
+# バックアップbatch用
+BACKUP_PATH = 'backup/'
+NUM_SAVE_BACKUP = 30
